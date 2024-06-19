@@ -68,19 +68,19 @@ $conn->close();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
+    <title>註冊會員</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div id="branding">
-                <h1>租車管理系統</h1>
+                <h2>註冊會員</h2>
             </div>
         </div>
     </header>
     <div class="container">
-        <h2>註冊會員</h2>
+    <br><br><img src="php.png" onclick="window.open('PHPisFUN.html')">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div>
                 <label>使用者名稱：</label>
@@ -99,7 +99,10 @@ $conn->close();
             </div>
             <div>
                 <input type="submit" value="確定註冊">
+                <a href="login.php">回登入頁</a>
             </div>
+            
+    </div>
     </form>
 </body>
 </html>

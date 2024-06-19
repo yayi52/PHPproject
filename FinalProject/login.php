@@ -7,13 +7,13 @@ $Account_err = $password_err = $system_err = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty(trim($_POST["Account"]))) {
-        $Account_err = "Please enter Account.";
+        $Account_err = "請輸入帳號";
     } else {
         $Account = trim($_POST["Account"]);
     }
 
     if (empty(trim($_POST["password"]))) {
-        $password_err = "Please enter your password.";
+        $password_err = "請輸入密碼";
     } else {
         $password = trim($_POST["password"]);
     }

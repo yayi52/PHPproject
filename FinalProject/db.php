@@ -21,6 +21,8 @@ $records_table = "CREATE TABLE IF NOT EXISTS rental_records (
     car VARCHAR(50) NOT NULL,
     rental_date DATE NOT NULL,
     return_date DATE,
+    done enum('Y','N') DEFAULT 'N',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
 )";
 

@@ -23,13 +23,14 @@ $result = $conn->query($sql);
     <h1 align="center">你好, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. 歡迎來到租車管理系統！<br><img src="car.jpg" alt="Car Image"></h1>    
     
     <h2>你的租車紀錄</h2>
-    <a href="add_record.php">新增紀錄</a>
+    <a href="add_record.php">預約租車</a>
     <table>
         <tr>
             <th>車輛品牌</th>
             <th>始租日期</th>
             <th>歸還日期</th>
-            <th>更改紀錄</th>
+            <th>交車完成(Y/N)</th>
+            
         </tr>
         <?php
         if ($result->num_rows > 0) {
@@ -38,7 +39,7 @@ $result = $conn->query($sql);
                 echo "<td>" . $row["car"] . "</td>";
                 echo "<td>" . $row["rental_date"] . "</td>";
                 echo "<td>" . $row["return_date"] . "</td>";
-                echo "<td><a href='edit_record.php?id=" . $row["id"] . "'>Edit</a> | <a href='delete_record.php?id=" . $row["id"] . "'>Delete</a></td>";
+                echo "<td>" . $row["done"] . "</td>";
                 echo "</tr>";
             }
         } else {

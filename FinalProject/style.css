@@ -78,8 +78,8 @@ th, td , h2{
     
 }
 h1,h2{
-    padding: 8px;
-    font-size: 50px;
+    padding: 10px;
+    font-size: 100px;
     
 }
 
@@ -106,7 +106,7 @@ form label {
     margin-bottom: 5px;
 }
 
-form input[type="text"], form input[type="password"], form input[type="date"] {
+form input[type="text"], form input[type="password"], form input[type="date"]{
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -126,7 +126,7 @@ form input[type="submit"]:hover {
     background: #e8491d;
 }
 img {
-    max-width: 50%; /* 這可以根據需要調整 */
+    max-width: 10%; /* 這可以根據需要調整 */
     height: auto;
     margin: 0 0 20px 20px; /* 添加一些間距 */
 }

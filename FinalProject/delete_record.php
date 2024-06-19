@@ -8,14 +8,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 require_once 'config.php';
 
 $id = $_GET["id"];
-$sql = "DELETE FROM rental_records WHERE id = ? AND user_id = ?";
-if ($stmt = $conn->prepare($sql)) {
-    $stmt->bind_param("ii", $id, $_SESSION["id"]);
-    $stmt->execute();
-    $stmt->close();
-}
-
+$sql = "DELETE FROM rental_records WHERE id = $id ";
+$conn->query($sql);
 $conn->close();
-header("location: index.php");
+header("location: view_records.php");
 exit;
 ?>
